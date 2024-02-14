@@ -7,7 +7,9 @@
     <fragment
         android:id="@+id/posts"
         android:name="kz.tutorial.jsonplaceholdertypicode.presentation.posts.PostsFragment">
-        <action app:destination="@+id/post_details" android:id="@+id/to_post_details"/>
+        <action
+            android:id="@+id/to_post_details"
+            app:destination="@+id/post_details" />
     </fragment>
 
     <fragment
@@ -18,5 +20,20 @@
             app:argType="integer"
             app:nullable="false" />
     </fragment>
+
+    <!--    TODO change name of fragment-->
+    <fragment
+        android:id="@+id/albums"
+        android:name="kz.tutorial.jsonplaceholdertypicode.presentation.posts.PostsFragment" />
+
+    <!--    TODO change name of fragment-->
+    <fragment
+        android:id="@+id/users"
+        android:name="kz.tutorial.jsonplaceholdertypicode.presentation.posts.PostsFragment" />
+
+    <!--    TODO change name of fragment-->
+    <fragment
+        android:id="@+id/profile"
+        android:name="kz.tutorial.jsonplaceholdertypicode.presentation.posts.PostsFragment" />
 
 </navigation>
