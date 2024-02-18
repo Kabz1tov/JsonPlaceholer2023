@@ -42,9 +42,9 @@ class AlbumsFragment : Fragment() {
 
     private fun initAdapter() {
         adapter = AlbumAdapter(layoutInflater)
-/*        adapter.listener = ClickListener {
-//            findNavController().navigate(AlbumsFragmentDirections.toPostDetails(it.id)) TODO
-        }*/
+        adapter.listener = ClickListener {
+            findNavController().navigate(AlbumsFragmentDirections.toAlbumPhotos(it.id))
+        }
     }
 
     private fun initRecycler() {
@@ -53,7 +53,8 @@ class AlbumsFragment : Fragment() {
         rvAlbums.adapter = adapter
         rvAlbums.layoutManager = LinearLayoutManager(currentContext)
 
-        val spaceItemDecoration = SpaceItemDecoration(verticalSpaceInDp = 8, horizontalSpaceInDp = 16)
+        val spaceItemDecoration =
+            SpaceItemDecoration(verticalSpaceInDp = 8, horizontalSpaceInDp = 16)
         rvAlbums.addItemDecoration(spaceItemDecoration)
     }
 

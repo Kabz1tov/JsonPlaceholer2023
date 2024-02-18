@@ -11,7 +11,11 @@ class AlbumsRepositoryImpl(private val mainApi: MainApi) : AlbumsRepository {
         return mainApi.getAlbums()
     }
 
-/*    override suspend fun getAlbumPhotos(albumId: Int): List<Photo> {
+    override suspend fun getAlbum(albumId: Int): Album {
+        return mainApi.getAlbum(albumId)
+    }
+
+    override suspend fun getAlbumPhotos(albumId: Int): List<Photo> {
         return mainApi.getAlbumPhotos(albumId)
-    }*/
+    }
 }

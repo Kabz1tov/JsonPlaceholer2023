@@ -23,7 +23,20 @@
 
     <fragment
         android:id="@+id/albums"
-        android:name="kz.tutorial.jsonplaceholdertypicode.presentation.albums.AlbumsFragment" />
+        android:name="kz.tutorial.jsonplaceholdertypicode.presentation.albums.AlbumsFragment">
+        <action
+            android:id="@+id/to_album_photos"
+            app:destination="@+id/album_photos" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/album_photos"
+        android:name="kz.tutorial.jsonplaceholdertypicode.presentation.album_photos.AlbumPhotosFragment">
+        <argument
+            android:name="album_id"
+            app:argType="integer"
+            app:nullable="false" />
+    </fragment>
 
     <!--    TODO change name of fragment-->
     <fragment
